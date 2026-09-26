@@ -4,7 +4,7 @@ Versione Android di **GMExtractions**, software per estrarre attività commercia
 
 ![Platform](https://img.shields.io/badge/Platform-Android-green)
 ![Qt](https://img.shields.io/badge/Qt-6.11.2-blue)
-![Version](https://img.shields.io/badge/Version-1.0.0--beta-orange)
+![Version](https://img.shields.io/badge/Version-1.0.1-blue)
 
 ---
 
@@ -33,13 +33,14 @@ GMExtractions interroga le API Geoapify per estrarre attività commerciali da un
 | Ricerca per provincia | Estrae attività da tutti i comuni di una provincia |
 | Ricerca per regione | Estrae attività da tutti i comuni di una regione |
 | 56 categorie | Bar, ristoranti, alberghi, negozi, farmacie, ecc. |
-| 8126 comuni italiani | Database integrato |
+| 8121 comuni italiani | Database integrato |
 | Stato attività | Da visitare / Visitato / Scartato (con colori) |
-| Note personali | Modificabili dalla riga |
+| Note personali | Modificabili con doppio tap o menu riga |
 | Arricchimento contatti | Email, Instagram, Facebook dal sito web |
 | Esportazione | Excel (.xls), PDF, CSV |
 | Google Maps | Apertura posizione con un tap |
 | Database SQLite | Storico persistente tra le sessioni |
+| Vista tabella ottimizzata | Fino a migliaia di righe per scheda senza crash (QTableView) |
 
 ---
 
@@ -55,8 +56,8 @@ Scarica l'APK dall'ultima release:
 ➡️ [**Releases**](../../releases/latest)
 
 Scegli il file corretto:
-- `GMExtractions-1.0-beta-arm64.apk` → **telefono Android**
-- `GMExtractions-1.0-beta-x86_64.apk` → solo emulatore sul PC
+- `GMExtractions-1.0.1-arm64.apk` → **telefono Android**
+- `GMExtractions-1.0.1-x86_64.apk` → solo emulatore sul PC
 
 ### Installazione
 1. Copia l'APK sul telefono
@@ -94,22 +95,36 @@ Se la chiave manca, l'app te lo chiede automaticamente al primo avvio.
 4. Tocca **AVVIA RICERCA**
 5. Ogni comune ha la sua scheda in alto
 
+### Navigare la tabella
+
+- **Scorri verticalmente** per navigare le righe
+- **Scorri orizzontalmente** per vedere tutte le 15 colonne (Via, CAP, Telefono, Sito, Email, ecc.)
+- **Doppio tap** su una cella:
+  - Sito / Email / Instagram / Facebook / Maps → apre il link
+  - Note → apre l'editor note
+- **Long press** (tieni premuto su una riga) → menu contestuale:
+  - **Mostra dettagli** → dialog con TUTTI i campi della riga
+  - Apri su Google Maps / Copia URL
+  - Modifica note
+  - Segna come: Da visitare / Visitato / Scartato
+
 ### Azioni sui risultati
 
 - **Per Via** — raggruppa le attività per via (utile per pianificare il giro di visite)
-- **Normale** — torna alla vista normale
-- **Riga** — seleziona una riga e tocca per aprire il menu con:
-  - Apri su Google Maps
-  - Copia URL
-  - Segna come: Da visitare / Visitato / Scartato
+- **Normale** — torna all'ordine alfabetico
+- **Riga** — apre il menu della riga corrente (alternativa al long press)
 - **Maps** — apre Google Maps per la riga selezionata
-- **Arricchisci** — scarica il sito web e cerca email / Instagram / Facebook
+- **Arricchisci** — scarica il sito web e cerca email / Instagram / Facebook:
+  - Nessuna selezione → chiede conferma per arricchire tutte le righe con sito
+  - Una o più righe selezionate → dialog con **Solo selezionate** / **Tutte con sito** / **Annulla**
 
 ### Filtri
 
 Sotto la barra di stato ci sono due menu:
 - **Categoria** — mostra solo una categoria specifica
 - **Stato** — Da visitare / Visitato / Scartato
+
+I filtri si combinano: puoi filtrare contemporaneamente per categoria **e** stato.
 
 ### Esportazione
 
@@ -119,12 +134,16 @@ Sotto la barra di stato ci sono due menu:
 
 Dopo l'esportazione, si apre automaticamente il menu **Condividi** di Android: puoi inviare il file via WhatsApp, Gmail, Drive, ecc.
 
+### Azzera
+
+Il pulsante **Azzera** cancella **tutto** lo storico del database (attività, stati, note, contatti). L'operazione **non è annullabile** e richiede conferma.
+
 ---
 
 ## 📖 Guida e Info
 
-- **Guida** — istruzioni complete, con pulsanti **▲ Su** / **▼ Giù** per lo scroll
-- **Info** — versione, crediti, come ottenere la API Key
+- **Guida** — istruzioni complete, con pulsanti **▲ Su** / **▼ Giù** per lo scroll rapido
+- **Info** — versione, crediti, contatore comuni e categorie disponibili, come ottenere la API Key
 
 ---
 
@@ -133,8 +152,6 @@ Dopo l'esportazione, si apre automaticamente il menu **Condividi** di Android: p
 - Fonte dati: **Geoapify** (OpenStreetMap + altre fonti aperte)
 - Rating, recensioni e orari **non disponibili** (solo Google Places li fornisce)
 - Copertura in Italia: buona ma non completa
-- Scroll nelle finestre Guida/Info tramite pulsanti ▲/▼ (limite di Qt Widgets su Android)
-- Menu di riga accessibile via pulsante **Riga** (long press non supportato su Qt Widgets)
 
 ---
 
