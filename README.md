@@ -30,7 +30,7 @@ GMExtractions interroga le API Geoapify per estrarre attività commerciali da un
 | 56 categorie | Bar, ristoranti, alberghi, negozi, farmacie, ecc. |
 | 8126 comuni italiani | Database integrato |
 | Stato attività | Da visitare / Visitato / Scartato (con colori) |
-| Note personali | Modificabili con doppio tap |
+| Note personali | Modificabili dalla riga |
 | Arricchimento contatti | Email, Instagram, Facebook dal sito web |
 | Esportazione | Excel (.xls), PDF, CSV |
 | Google Maps | Apertura posizione con un tap |
@@ -72,9 +72,12 @@ Scegli il file corretto:
 **Piano gratuito**: 3.000 richieste al giorno.
 
 ### Inserire la API Key
+
 1. Apri l'app
-2. Tocca **⚙ API Key** in alto a destra
+2. Tocca il pulsante **API Key** in alto a destra
 3. Incolla la chiave, tocca **OK**
+
+Se la chiave manca, l'app te lo chiede automaticamente al primo avvio.
 
 ---
 
@@ -82,13 +85,41 @@ Scegli il file corretto:
 
 1. **Aggiungi comuni** — digita le prime lettere e tocca il suggerimento
 2. **Seleziona categorie** — stessa procedura
-3. **Scegli modalità** — Comune / Provincia / Regione
+3. **Scegli modalità** — Comune / Provincia / Regione (menu "Cerca in:")
 4. Tocca **AVVIA RICERCA**
 5. Ogni comune ha la sua scheda in alto
-6. Tocca **Raggruppa per Via** per organizzare le visite
-7. Esporta in **Excel**, **PDF** o **CSV**
 
-I file esportati vengono salvati nella cartella **Download** del telefono.
+### Azioni sui risultati
+
+- **Per Via** — raggruppa le attività per via (utile per pianificare il giro di visite)
+- **Normale** — torna alla vista normale
+- **Riga** — seleziona una riga e tocca per aprire il menu con:
+  - Apri su Google Maps
+  - Copia URL
+  - Segna come: Da visitare / Visitato / Scartato
+- **Maps** — apre Google Maps per la riga selezionata
+- **Arricchisci** — scarica il sito web e cerca email / Instagram / Facebook
+
+### Filtri
+
+Sotto la barra di stato ci sono due menu:
+- **Categoria** — mostra solo una categoria specifica
+- **Stato** — Da visitare / Visitato / Scartato
+
+### Esportazione
+
+- **Excel** (.xls) — un foglio per comune, URL cliccabili
+- **PDF** — report A4 orizzontale con tabelle
+- **CSV** — tutte le righe in un file
+
+I file vengono salvati nella cartella **Download** del telefono.
+
+---
+
+## 📖 Guida e Info
+
+- **Guida** — istruzioni complete, con pulsanti **▲ Su** / **▼ Giù** per lo scroll
+- **Info** — versione, crediti, come ottenere la API Key
 
 ---
 
@@ -97,7 +128,8 @@ I file esportati vengono salvati nella cartella **Download** del telefono.
 - Fonte dati: **Geoapify** (OpenStreetMap + altre fonti aperte)
 - Rating, recensioni e orari **non disponibili** (solo Google Places li fornisce)
 - Copertura in Italia: buona ma non completa
-- UI in stile desktop (Qt Widgets), non ottimizzata per il touch
+- Scroll nelle finestre Guida/Info tramite pulsanti ▲/▼ (limite di Qt Widgets su Android)
+- Menu di riga accessibile via pulsante **Riga** (long press non supportato su Qt Widgets)
 
 ---
 
