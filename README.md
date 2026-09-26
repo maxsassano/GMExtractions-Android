@@ -8,6 +8,11 @@ Versione Android di **GMExtractions**, software per estrarre attività commercia
 
 ---
 
+<p align="center">
+  <img src="screen/main_gmextractions.png" alt="GMExtractions su Android" width="600">
+</p>
+
+
 ## 📱 Cos'è
 
 GMExtractions interroga le API Geoapify per estrarre attività commerciali da un'area geografica (comune, provincia o regione) filtrate per categoria. I risultati sono salvati in un database SQLite locale e visualizzati in una tabella con la possibilità di:
