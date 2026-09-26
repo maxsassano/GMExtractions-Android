@@ -117,7 +117,7 @@ Sotto la barra di stato ci sono due menu:
 - **PDF** — report A4 orizzontale con tabelle
 - **CSV** — tutte le righe in un file
 
-I file vengono salvati nella cartella **Download** del telefono.
+Dopo l'esportazione, si apre automaticamente il menu **Condividi** di Android: puoi inviare il file via WhatsApp, Gmail, Drive, ecc.
 
 ---
 
