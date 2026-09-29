@@ -161,4 +161,19 @@ Il pulsante **Azzera** cancella **tutto** lo storico del database (attività, st
 - API: [Geoapify](https://www.geoapify.com/)
 - Dati: © OpenStreetMap contributors (ODbL)
 
+---
+
+## ☕ Sostieni il progetto
+
+Se l'app ti è utile, puoi offrirmi un caffè:
+
+[![PayPal](https://img.shields.io/badge/PayPal-Offrimi%20un%20caffè-0070BA?logo=paypal)](https://paypal.me/veruscatanese)
+
+
+Ogni contributo aiuta a mantenere il progetto attivo e senza pubblicità. Grazie! 🙏
+
+---
+
+## 🙏 Crediti
+
 © 2026 Massimo Sassano
